@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Practice business, accounting, marketing, and computer information systems terminology through real-life scenarios.">
+  <title>Real-Life Simulation | Jaden's Hub</title>
+  <link rel="stylesheet" href="Stylesheet.css">
+</head>
+
+<body class="simulation-page">
+
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Jaden's Hub home">
+      <span class="brand-icon" aria-hidden="true">🌱</span>
+      <span>Jaden's Hub</span>
+    </a>
+
+    <button class="mobile-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-navigation"><span class="hamburger-lines" aria-hidden="true"><span></span><span></span><span></span></span></button>
+    <nav class="main-nav" id="mobile-navigation" aria-label="Main navigation">
+      <a href="terms.html">Terms</a>
+      <a href="categories.html">Categories</a>
+      <a href="quiz.html">Daily Quiz</a>
+      <a href="simulation.html" aria-current="page">Simulation</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="services.html">Products/Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About Me</a>
+    </nav>
+
+    <a class="button button-small" href="terms.html">Start learning</a>
+  </header>
+
+  <main class="simulation-main">
+    <section class="simulation-container">
+
+      <!-- MAIN MENU -->
+      <div id="menu-screen" class="simulation-screen">
+        <p class="eyebrow">Learn by doing</p>
+        <h1>Real-Life Terminology Simulation</h1>
+        <p class="simulation-intro">
+          Learn professional terminology by using it in situations you might actually experience.
+        </p>
+
+        <div class="simulation-actions">
+          <button id="start-button" class="simulation-primary-button">
+            Start Simulation
+          </button>
+
+          <button id="exit-button" class="simulation-secondary-button">
+            Exit to Jaden's Hub
+          </button>
+        </div>
+      </div>
+
+      <!-- CATEGORY SELECTION -->
+      <div id="category-screen" class="simulation-screen" style="display: none;">
+        <p class="eyebrow">Choose your path</p>
+        <h1>Choose a Category</h1>
+        <p class="simulation-intro">What do you want to practice?</p>
+
+        <div class="simulation-category-grid">
+          <button class="category-button" data-category="Business">
+            <span class="simulation-category-icon" aria-hidden="true">💼</span>
+            <span>Business</span>
+          </button>
+
+          <button class="category-button" data-category="Accounting">
+            <span class="simulation-category-icon" aria-hidden="true">🧾</span>
+            <span>Accounting</span>
+          </button>
+
+          <button class="category-button" data-category="Marketing">
+            <span class="simulation-category-icon" aria-hidden="true">📣</span>
+            <span>Marketing</span>
+          </button>
+
+          <button class="category-button" data-category="Computer Information Systems">
+            <span class="simulation-category-icon" aria-hidden="true">💻</span>
+            <span>Computer Information Systems</span>
+          </button>
+
+          <button class="category-button mixed-category-button" data-category="Mixed">
+            <span class="simulation-category-icon" aria-hidden="true">🌐</span>
+            <span>Mixed Challenge</span>
+          </button>
+        </div>
+
+        <button id="category-menu-button" class="simulation-secondary-button">
+          Back to Main Menu
+        </button>
+      </div>
+
+      <!-- GAME SCREEN -->
+      <div id="game-screen" class="simulation-screen" style="display: none;">
+        <div class="simulation-top-row">
+          <button id="menu-button" class="simulation-small-button">
+            ← Main Menu
+          </button>
+
+          <p class="score-display">
+            Score:
+            <span id="score">0</span>
+            /
+            <span id="total">0</span>
+          </p>
+        </div>
+
+        <p id="category" class="simulation-category-label"></p>
+
+        <div id="scenario" class="scenario-card">
+          Loading scenario...
+        </div>
+
+        <h2 class="simulation-question-heading">
+          Which term best describes this situation?
+        </h2>
+
+        <div id="choices" class="simulation-choices"></div>
+
+        <div id="feedback"></div>
+
+        <button id="next-button" class="simulation-primary-button" style="display: none;">
+          Next Scenario →
+        </button>
+      </div>
+
+      <!-- RESULTS SCREEN -->
+      <div id="results-screen" class="simulation-screen" style="display: none;">
+        <p class="eyebrow">Challenge complete</p>
+        <h1>Simulation Complete!</h1>
+
+        <div id="final-score" class="final-score-card"></div>
+
+        <p class="simulation-intro">
+          You just practiced professional terminology through real-world situations
+          instead of simply memorizing definitions.
+        </p>
+
+        <p class="simulation-motto">
+          Realize it. Utilize it. Thrive.
+        </p>
+
+        <div class="simulation-actions">
+          <button id="play-again-button" class="simulation-primary-button">
+            Play Again
+          </button>
+
+          <button id="choose-category-button" class="simulation-secondary-button">
+            Choose Another Category
+          </button>
+
+          <button id="results-menu-button" class="simulation-secondary-button">
+            Main Menu
+          </button>
+
+          <button id="results-exit-button" class="simulation-secondary-button">
+            Exit to Jaden's Hub
+          </button>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand" href="index.html" aria-label="Jaden's Hub home">
+      <span class="brand-icon" aria-hidden="true">🌱</span>
+      <span>Jaden's Hub</span>
+    </a>
+
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="terms.html">Terms</a>
+      <a href="categories.html">Categories</a>
+      <a href="quiz.html">Daily Quiz</a>
+      <a href="simulation.html" aria-current="page">Simulation</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="services.html">Products/Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About Me</a>
+    </nav>
+
+    <p>Friendly words for a more confident working world.</p>
+    <p>&copy; 2026 Jaden's Hub</p>
+  </footer>
+
+  <script src="simulation.js"></script>
+  <script src="mobile-menu.js" defer></script>
+</body>
+
+</html>
