@@ -1509,3 +1509,21 @@ select:focus-visible, [tabindex]:focus-visible {
   .mobile-menu-toggle, .hamburger-lines span { transition: none; }
   .mobile-menu-toggle:hover { transform: none; }
 }
+
+/* Searchable Jaden's Hub glossary and five-category layout */
+.hub-category-grid {grid-template-columns:repeat(3,minmax(0,1fr));}
+.hub-category-grid .category-card strong{display:block;margin-top:1rem;color:#07536b;}
+.glossary-tools{max-width:1100px;margin:0 auto 2rem;padding:1.4rem;border:1px solid rgba(255,255,255,.9);border-radius:24px;background:rgba(255,255,255,.82);box-shadow:var(--shadow)}
+.glossary-tools label{display:block;font-weight:800;margin-bottom:.5rem}
+#glossary-search{display:block;width:100%;padding:.85rem 1rem;border:1px solid #6dabb5;border-radius:14px;font:inherit;color:#123846;background:#fff}
+.glossary-filters{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1rem}
+.glossary-filter{padding:.6rem .9rem;border:1px solid rgba(0,105,116,.25);border-radius:999px;background:#eefbff;color:#123846;font:inherit;font-weight:700;cursor:pointer}
+.glossary-filter:hover,.glossary-filter.is-active{background:linear-gradient(135deg,#00ffcc,#8de6b1);border-color:#009d8b}
+#glossary-count{margin:.9rem 0 0;color:#294650;font-weight:700}
+.glossary-grid{grid-template-columns:repeat(3,minmax(0,1fr));}
+.glossary-grid .term-card h2{margin:.7rem 0 .55rem;color:#06283d;font-size:1.45rem}
+.glossary-grid .term-card p{min-height:3.6em}
+.glossary-tag{display:inline-block;padding:.3rem .7rem;border-radius:999px;background:#e6f8df;color:#275d32;font-weight:800;font-size:.8rem}
+#glossary-empty{max-width:800px;margin:1rem auto;text-align:center;font-weight:700}
+@media(max-width:1000px){.hub-category-grid,.glossary-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.hub-category-grid,.glossary-grid{grid-template-columns:1fr}.glossary-tools{padding:1rem}.glossary-filter{font-size:.9rem}.glossary-grid .term-card p{min-height:0}}
