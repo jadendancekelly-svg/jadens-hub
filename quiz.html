@@ -40,7 +40,7 @@
           </p>
         </div>
 
-        <form class="quiz-options">
+        <form class="quiz-options" id="daily-quiz-form">
           <label>
             <input type="radio" name="break-even" value="correct">
             <span>A business earns the same amount that it spends.</span>
@@ -56,7 +56,8 @@
             <span>A business divides its ownership equally.</span>
           </label>
 
-          <button class="button" type="button">Check my answer</button>
+          <button class="button" type="submit">Check my answer</button>
+          <p id="quiz-feedback" role="status" aria-live="polite" style="display:none; margin-top:1rem; padding:1rem 1.25rem; border-radius:1rem; background:#eafaf7; color:#123842; font-weight:600; line-height:1.5;"></p>
         </form>
       </div>
     </section>
@@ -82,5 +83,6 @@
     <p>&copy; 2026 Jaden's Hub</p>
   </footer>
   <script src="mobile-menu.js" defer></script>
+  <script src="quiz.js" defer></script>
 </body>
 </html>
