@@ -1527,3 +1527,25 @@ select:focus-visible, [tabindex]:focus-visible {
 #glossary-empty{max-width:800px;margin:1rem auto;text-align:center;font-weight:700}
 @media(max-width:1000px){.hub-category-grid,.glossary-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:650px){.hub-category-grid,.glossary-grid{grid-template-columns:1fr}.glossary-tools{padding:1rem}.glossary-filter{font-size:.9rem}.glossary-grid .term-card p{min-height:0}}
+
+
+/* Homepage quick-quiz button: frosted white with aqua neon glow. */
+.hero-actions .button-secondary {
+  position: relative;
+  background: rgba(255, 255, 255, .88);
+  color: #06283d;
+  border: 1px solid rgba(86, 206, 213, .50);
+  box-shadow: 0 10px 25px rgba(0, 220, 194, .25), inset 0 1px 0 rgba(255, 255, 255, .95);
+  transition: transform .22s ease, box-shadow .22s ease, background .22s ease;
+}
+.hero-actions .button-secondary:hover {
+  transform: translateY(-3px);
+  background: #f3ffff;
+  box-shadow: 0 14px 32px rgba(0, 220, 194, .45), 0 0 18px rgba(0, 255, 204, .26), inset 0 1px 0 #fff;
+}
+.hero-actions .button-secondary:active { transform: translateY(-1px); }
+@media (prefers-reduced-motion: reduce) {
+  .hero-actions .button-secondary { transition: none; }
+  .hero-actions .button-secondary:hover,
+  .hero-actions .button-secondary:active { transform: none; }
+}
