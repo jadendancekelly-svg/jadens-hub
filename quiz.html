@@ -33,7 +33,8 @@
       <div class="quiz-card">
         <div class="quiz-copy">
           <p class="eyebrow">Daily mini-quiz</p>
-          <h1>What does “break-even” mean?</h1>
+          <p id="quiz-day-label" style="margin:0 0 .6rem; font-size:.95rem; color:#37616a;">A new featured question every day · Keep practicing anytime</p>
+          <h1 id="quiz-question">What does “break-even” mean?</h1>
           <p>
             Choose the definition that fits best. No pressure—mistakes
             help new words stick.
@@ -41,23 +42,12 @@
         </div>
 
         <form class="quiz-options" id="daily-quiz-form">
-          <label>
-            <input type="radio" name="break-even" value="correct">
-            <span>A business earns the same amount that it spends.</span>
-          </label>
-
-          <label>
-            <input type="radio" name="break-even" value="incorrect">
-            <span>A company sells every product in its inventory.</span>
-          </label>
-
-          <label>
-            <input type="radio" name="break-even" value="incorrect">
-            <span>A business divides its ownership equally.</span>
-          </label>
-
+          <div id="quiz-answers" style="display:contents;">
+            <label><input type="radio" name="daily-answer" value="0"><span>Loading question…</span></label>
+          </div>
           <button class="button" type="submit">Check my answer</button>
           <p id="quiz-feedback" role="status" aria-live="polite" style="display:none; margin-top:1rem; padding:1rem 1.25rem; border-radius:1rem; background:#eafaf7; color:#123842; font-weight:600; line-height:1.5;"></p>
+          <button id="next-quiz-question" class="button" type="button" style="margin-top:1rem; background:#e8f7fa; color:#123842; border:1px solid #a5d5d8;">Next question →</button>
         </form>
       </div>
     </section>
