@@ -1529,23 +1529,32 @@ select:focus-visible, [tabindex]:focus-visible {
 @media(max-width:650px){.hub-category-grid,.glossary-grid{grid-template-columns:1fr}.glossary-tools{padding:1rem}.glossary-filter{font-size:.9rem}.glossary-grid .term-card p{min-height:0}}
 
 
-/* Homepage quick-quiz button: frosted white with aqua neon glow. */
-.hero-actions .button-secondary {
+/* Homepage only: glowing frosted Quick Quiz button */
+.hero-actions .quick-quiz-glow {
   position: relative;
+  isolation: isolate;
   background: rgba(255, 255, 255, .88);
-  color: #06283d;
-  border: 1px solid rgba(86, 206, 213, .50);
-  box-shadow: 0 10px 25px rgba(0, 220, 194, .25), inset 0 1px 0 rgba(255, 255, 255, .95);
-  transition: transform .22s ease, box-shadow .22s ease, background .22s ease;
+  color: #073e57;
+  border: 1px solid rgba(92, 211, 219, .55);
+  box-shadow: 0 10px 22px rgba(0, 195, 195, .18), 0 0 18px rgba(0, 255, 204, .15), inset 0 1px 0 rgba(255,255,255,.95);
+  transition: transform .24s ease, box-shadow .3s ease, background-color .3s ease;
 }
-.hero-actions .button-secondary:hover {
-  transform: translateY(-3px);
-  background: #f3ffff;
-  box-shadow: 0 14px 32px rgba(0, 220, 194, .45), 0 0 18px rgba(0, 255, 204, .26), inset 0 1px 0 #fff;
+.hero-actions .quick-quiz-glow:hover,
+.hero-actions .quick-quiz-glow:focus-visible {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, .97);
+  box-shadow: 0 14px 30px rgba(0, 200, 205, .32), 0 0 26px rgba(0, 255, 204, .38), 0 0 40px rgba(86, 218, 150, .22), inset 0 1px 0 #fff;
+  animation: quick-quiz-aura 1.8s ease-in-out infinite alternate;
 }
-.hero-actions .button-secondary:active { transform: translateY(-1px); }
+.hero-actions .quick-quiz-glow:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 18px rgba(0, 255, 204, .4);
+}
+@keyframes quick-quiz-aura {
+  from { box-shadow: 0 12px 26px rgba(0, 200, 205, .25), 0 0 15px rgba(0, 255, 204, .26), 0 0 28px rgba(86, 218, 150, .12); }
+  to { box-shadow: 0 16px 34px rgba(0, 200, 205, .38), 0 0 30px rgba(0, 255, 204, .52), 0 0 48px rgba(86, 218, 150, .30); }
+}
 @media (prefers-reduced-motion: reduce) {
-  .hero-actions .button-secondary { transition: none; }
-  .hero-actions .button-secondary:hover,
-  .hero-actions .button-secondary:active { transform: none; }
+  .hero-actions .quick-quiz-glow:hover,
+  .hero-actions .quick-quiz-glow:focus-visible { animation: none; transform: none; }
 }
