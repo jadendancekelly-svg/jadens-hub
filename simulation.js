@@ -468,6 +468,55 @@ const scenarios = [
 
         explanation:
             "Cybersecurity involves protecting systems, networks, and data from digital attacks and unauthorized access. Jaden's Translation: It's everything you do to keep people who aren't supposed to be in your digital stuff OUT of your digital stuff."
+    },
+
+    // =================================================
+    // WEB DEVELOPMENT
+    // =================================================
+
+    {
+        category: "Web Development",
+        situation: "You're creating a website and need to add a main heading, paragraphs, images, and links to the page.",
+        question: "Which language gives the webpage its structure and content?",
+        choices: ["HTML", "CSS", "SQL", "Python"],
+        answer: "HTML",
+        explanation: "HTML organizes the content and structure of a webpage. Jaden's Translation: HTML is the skeleton that tells the browser what's on the page."
+    },
+
+    {
+        category: "Web Development",
+        situation: "Your website works, but the text looks plain and the buttons have no colors, spacing, or rounded corners. You want to change how everything looks.",
+        question: "Which language should you use to style the webpage?",
+        choices: ["JavaScript", "HTML", "CSS", "SQL"],
+        answer: "CSS",
+        explanation: "CSS controls the appearance and layout of webpages. Jaden's Translation: HTML builds the page; CSS gives it the colors, spacing, and personality."
+    },
+
+    {
+        category: "Web Development",
+        situation: "You want a quiz button on your website to check a visitor's answer and display feedback without opening a different page.",
+        question: "Which programming language can make that button interactive in the browser?",
+        choices: ["CSS", "JavaScript", "HTML", "SQL"],
+        answer: "JavaScript",
+        explanation: "JavaScript lets a webpage respond to actions and update content. Jaden's Translation: It's what makes the button actually DO something when you click it."
+    },
+
+    {
+        category: "Web Development",
+        situation: "Your website looks good on a laptop, but the menu and text don't fit properly on a phone. You adjust the layout to work on different screen sizes.",
+        question: "What design approach are you using?",
+        choices: ["Responsive Design", "Search Engine Optimization", "Data Encryption", "Version Control"],
+        answer: "Responsive Design",
+        explanation: "Responsive design adapts a website's layout to different devices and screen sizes. Jaden's Translation: The same website should still look and work right whether you're using a phone, tablet, or computer."
+    },
+
+    {
+        category: "Web Development",
+        situation: "You add descriptions to website images so visitors using screen readers can understand what those images show.",
+        question: "What are these image descriptions commonly called?",
+        choices: ["Alt Text", "Media Queries", "Cookies", "Hyperlinks"],
+        answer: "Alt Text",
+        explanation: "Alt text is a written alternative that describes an image when needed. Jaden's Translation: It's a way to tell someone what's in a picture even if they can't see it."
     }
 
 ];
