@@ -1558,3 +1558,22 @@ select:focus-visible, [tabindex]:focus-visible {
   .hero-actions .quick-quiz-glow:hover,
   .hero-actions .quick-quiz-glow:focus-visible { animation: none; transform: none; }
 }
+
+
+/* FINAL HEADER READABILITY AND FOOTER CLEANUP */
+.site-header { flex-wrap: wrap; justify-content: center; gap: .55rem 1rem; padding: .75rem 3vw; }
+.site-header .brand { width: 300px; height: 104px; flex: 0 0 300px; }
+.site-header .main-nav { flex: 1 1 640px; justify-content: center; gap: .35rem .4rem; }
+.site-header .main-nav a { font-size: 1.1rem; line-height: 1.35; padding: .65rem .65rem; }
+.site-header > .button { flex-shrink: 0; }
+/* Hide redundant footer links on every page; keep footer artwork and text. */
+.site-footer .footer-nav { display: none !important; }
+@media (max-width: 900px) {
+  .site-header { justify-content: space-between; }
+  .site-header .brand { width: clamp(170px, 43vw, 235px); height: 82px; flex: 0 1 auto; }
+  .site-header .main-nav { flex: 0 0 100%; }
+  .site-header .main-nav a { font-size: 1.08rem; }
+}
+@media (max-width: 600px) {
+  .site-header .brand { width: clamp(160px, 49vw, 215px); height: 75px; }
+}
